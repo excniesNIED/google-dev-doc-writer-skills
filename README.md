@@ -20,7 +20,19 @@ Real sources behind the guides:
 
 ## Installation
 
-You can install the skills directly to `~/.agents/skills/google-dev-doc-writer/` - this canonical path is read by all compatible agents (Claude Code, Codex, OpenCode). No extra configuration is required.
+Install the skill from the [skills.sh](https://www.skills.sh) directory with one command (requires Node.js 22.20 or later):
+
+```sh
+npx skills add excniesNIED/google-dev-doc-writer-skills -g -y
+```
+
+The command installs `google-dev-doc-writer` to `~/.agents/skills/google-dev-doc-writer/` and symlinks it into every detected agent. To select the skill and target agents interactively, or to install into the current project instead of globally, omit the flags:
+
+```sh
+npx skills add excniesNIED/google-dev-doc-writer-skills
+```
+
+Alternatively, install the skills directly to `~/.agents/skills/google-dev-doc-writer/` - this canonical path is read by all compatible agents (Claude Code, Codex, OpenCode). No extra configuration is required.
 
 Host-specific paths also work and are discovered automatically at startup (deduplicated by name, first match wins):
 
